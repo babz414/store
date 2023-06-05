@@ -1,0 +1,735 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: Poppins; */
+}
+
+/* HOME PAGE */
+body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --brown: rgb(165, 91, 42);
+}
+
+.home-page .container {
+  background: white;
+  height: 100vh;
+  max-width: 100vw;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+#cart-amount {
+  background-color: white;
+  color: var(--brown);
+  font-weight: bold;
+  width: 20px;
+  /* height: 25px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  position: fixed;
+  z-index: 20000;
+  top: 26px;
+  right: 65px;
+}
+
+.navbar {
+  position: fixed;
+  width: 100vw;
+  padding: 20px 40px;
+  /* padding-bottom: 10px; */
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  z-index: 100;
+}
+
+.navbar.sticky {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#navbar {
+  padding: 15px;
+}
+
+#cart,
+#bars {
+  margin-right: -25px;
+  font-size: 25px;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 7px;
+}
+
+li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--brown);
+  font-weight: bold;
+}
+
+#navbar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 15px 0;
+}
+
+#navbar li {
+  padding: 0 15px;
+}
+
+h3 {
+  color: var(--brown);
+  font-size: 35px;
+}
+
+.brand-info {
+  margin-top: 150px;
+  position: absolute;
+  padding: 0 40px;
+}
+
+.brand-info-text {
+  max-width: 30vw;
+}
+
+.brand-info-text p {
+  color: var(--brown);
+}
+
+.brand-info-text h1 {
+  font-size: 60px;
+  color: var(--brown);
+  text-shadow: 1px 1px 2px #000000;
+}
+
+#image {
+  position: absolute;
+  right: 50px;
+  bottom: 0px;
+  width: 350px;
+  height: 450px;
+}
+
+#cart,
+#bars {
+  color: var(--brown);
+  padding: 25px;
+}
+
+#letterB {
+  position: relative;
+}
+
+#crown {
+  position: absolute;
+  transform: translateY(-8px);
+  color: var(--brown);
+}
+
+#bars {
+  opacity: 0;
+  /* transform: translateY(-10px); */
+}
+
+#times {
+  display: none;
+  color: var(--brown);
+  font-size: 25px;
+}
+
+#cart-added {
+  position: fixed;
+  top: 150px;
+  right: -30vw;
+  background-color: white;
+  width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 1.5s ease-in;
+}
+
+#cart-added.active {
+  right: 10px;
+  transition: 0.5s;
+}
+
+#cart-added.active.remove {
+  right: -30vw;
+}
+#cart-added #item-added {
+  display: flex;
+  padding: 25px 60px;
+}
+
+#check-icon {
+  color: green;
+  margin-right: 15px;
+}
+
+#cart-added #hr {
+  width: 0;
+  height: 5px;
+  background-color: green;
+  padding: 0;
+  transition: 3s ease;
+}
+
+#cart-added #hr.active {
+  width: 300px;
+}
+/* HOME PAGE */
+
+/* SECOND PAGE */
+
+#second-page .container {
+  /* margin-top: 50px; */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 150vh; */
+  /* justify-content: center; */
+}
+
+#second-page #header {
+  color: var(--brown);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#second-page .tab1,
+#second-page .tab2,
+#second-page .tab3 {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* #second-page p,
+#second-page h4,
+#second-page header,
+#second-page button {
+  font-family: Poppins;
+} */
+
+#second-page p {
+  font-weight: 500;
+}
+
+#second-page h4 {
+  font-weight: bolder;
+}
+
+#second-page .tab1 img,
+#second-page .tab2 img,
+#second-page .tab3 img {
+  width: 180px;
+  height: 200px;
+}
+
+#second-page .tab1 img:hover,
+#second-page .tab2 img:hover,
+#second-page .tab3 img:hover {
+  width: 200px;
+  height: 230px;
+}
+
+#second-page .tab1 .box1,
+#second-page .tab1 .box2,
+#second-page .tab1 .box3,
+#second-page .tab2 .box1,
+#second-page .tab2 .box2,
+#second-page .tab2 .box3,
+#second-page .tab3 .box1,
+#second-page .tab3 .box2,
+#second-page .tab3 .box3 {
+  width: 20vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  height: 380px;
+  margin-bottom: 25px;
+  background-color: white;
+  /* border: solid 5px var(--brown); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#second-page .tab1 p,
+#second-page .tab2 p,
+#second-page .tab3 p {
+  max-width: 200px;
+  margin-top: -20px;
+  text-align: center;
+}
+
+#second-page .tab1 button,
+#second-page .tab2 button,
+#second-page .tab3 button {
+  padding: 5px 30px;
+
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--brown);
+}
+
+#second-page .tab2 {
+  margin: 20px 0;
+}
+
+#second-page #men-wears,
+#second-page #women-wears,
+#second-page #kids-wears,
+#second-page #jewelry {
+  padding-top: 100px;
+  margin-top: -60px;
+}
+/* SECOND PAGE */
+
+@media (max-width: 1200px) {
+  li {
+    padding: 2px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  #brand-name {
+    font-size: 30px;
+    margin-top: 3px;
+  }
+
+  #crown {
+    position: absolute;
+    transform: translateY(-6px);
+    color: var(--brown);
+  }
+
+  #navbar li a {
+    font-size: 15px;
+  }
+
+  #cart,
+  #bars {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .brand-info-text {
+    max-width: 40vw;
+  }
+}
+
+@media (max-width: 856px) {
+  .home-page .container {
+    position: relative;
+  }
+  #image {
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    top: 25vh;
+  }
+
+  #cart-amount {
+    top: 26px;
+    right: 15px;
+  }
+
+  /* second page */
+
+  #second-page .tab1,
+  #second-page .tab2,
+  #second-page .tab3 {
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #second-page .tab1 .box1,
+  #second-page .tab1 .box2,
+  #second-page .tab1 .box3,
+  #second-page .tab2 .box1,
+  #second-page .tab2 .box2,
+  #second-page .tab2 .box3,
+  #second-page .tab3 .box1,
+  #second-page .tab3 .box2,
+  #second-page .tab3 .box3 {
+    width: 30vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+    padding-top: 10px;
+    height: 380px;
+    background-color: white;
+  }
+  /* second page */
+}
+
+@media (max-width: 845px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
+  }
+
+  #crown {
+    font-size: 15px;
+    position: absolute;
+    transform: translateY(2px);
+    color: var(--brown);
+  }
+
+  .brand-info-text {
+    max-width: 45vw;
+  }
+
+  #cart {
+    margin-right: -70px;
+  }
+  #brand-name {
+    font-size: 25px;
+    margin-top: 6.5px;
+  }
+
+  li a {
+    margin: 0 -5px;
+  }
+
+  #cart-added {
+    right: -100vw;
+  }
+
+  #second-page {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 664px) {
+  li a {
+    margin: 0 -10px;
+    font-size: 13px;
+  }
+
+  li {
+    padding: 5px 7px;
+  }
+}
+
+@media (max-width: 630px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  #navbar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    right: 0;
+    top: 80px;
+    padding: 20px 0;
+    background-color: var(--brown);
+    transform: translateX(100%);
+    transition: 0.8s ease;
+  }
+
+  li a {
+    margin: 0 5px;
+  }
+
+  #navbar li {
+    padding: 0 15px;
+  }
+
+  #navbar li a {
+    color: white;
+  }
+
+  #brand-name {
+    margin-left: -10px;
+  }
+
+  #crown {
+    margin-left: -10px;
+  }
+
+  #navbar.toggle {
+    transform: translateX(-0%);
+  }
+
+  #bars {
+    position: relative;
+    margin-top: -20px;
+    opacity: 100;
+  }
+
+  .brand-info {
+    z-index: 100;
+  }
+
+  #cart {
+    margin-right: -30px;
+  }
+
+  #image {
+    width: 300px;
+    position: absolute;
+    top: 50vh;
+    height: 350px;
+  }
+
+  #times {
+    display: none;
+    position: fixed;
+    top: 43px;
+    right: 33px;
+  }
+
+  #times.active {
+    display: block;
+    z-index: 1000;
+  }
+
+  .brand-info {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brand-info-text {
+    max-width: 60vw;
+  }
+
+  .brand-info-text h1 {
+    font-size: 50px;
+    color: var(--brown);
+    text-align: center;
+    text-shadow: 1px 1px 2px #000000;
+    margin-top: -60px;
+  }
+
+  .brand-info-text p {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--brown);
+    font-weight: bold;
+  }
+  #cart-amount {
+    top: 26px;
+    right: 55px;
+  }
+
+  /* second page */
+
+  #second-page .tab1,
+  #second-page .tab2,
+  #second-page .tab3 {
+    /* width: 70vw; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #second-page .tab1 .box1,
+  #second-page .tab1 .box2,
+  #second-page .tab1 .box3,
+  #second-page .tab2 .box1,
+  #second-page .tab2 .box2,
+  #second-page .tab2 .box3,
+  #second-page .tab3 .box1,
+  #second-page .tab3 .box2,
+  #second-page .tab3 .box3 {
+    width: 80vw;
+    height: 400px;
+    margin: 15px 0;
+  }
+
+  #second-page .tab1 p,
+  #second-page .tab2 p,
+  #second-page .tab3 p {
+    max-width: 200px;
+    margin: -20px 0;
+    text-align: center;
+  }
+
+  #second-page .tab1 button,
+  #second-page .tab2 button,
+  #second-page .tab3 button {
+    padding: 2px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    /* margin-top: -50pz; */
+    margin-bottom: 20px;
+    border: none;
+    color: white;
+    background-color: var(--brown);
+  }
+
+  #second-page .tab1 button,
+  #second-page .tab2 button,
+  #second-page .tab3 button {
+    padding: 5px 30px;
+  }
+
+  #second-page #men-wears,
+  #second-page #women-wears,
+  #second-page #kids-wears,
+  #second-page #jewelry {
+    padding-top: 150px;
+    margin-top: -100px;
+  }
+
+  #second-page #men-wears {
+    /* margin-top: -150px; */
+  }
+  /* second page */
+}
+
+@media (max-width: 414px) {
+  #brand-name {
+    font-size: 25px;
+  }
+
+  #navbar li {
+    margin: 0 -12px;
+    /* margin: 0 -15px; */
+  }
+
+  .brand-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #bars {
+    padding: 15px;
+  }
+  #cart {
+    padding: 15px;
+    margin-right: 10px;
+  }
+
+  #navigation {
+    margin-top: 8px;
+  }
+
+  #cart-amount {
+    top: 26px;
+    right: 80px;
+  }
+
+  #cart-added {
+    right: -100vw;
+  }
+
+  #cart-added.active {
+    right: 10px;
+  }
+
+  /* second page */
+
+  #second-page .container {
+    margin-top: -90px;
+    /* z-index: 10; */
+  }
+
+  #second-page .tab1 .box1,
+  #second-page .tab1 .box2,
+  #second-page .tab1 .box3,
+  #second-page .tab2 .box1,
+  #second-page .tab2 .box2,
+  #second-page .tab2 .box3,
+  #second-page .tab3 .box1,
+  #second-page .tab3 .box2,
+  #second-page .tab3 .box3 {
+    width: 80vw;
+    height: 400px;
+    margin: 15px 0;
+  }
+
+  #second-page .tab1 img,
+  #second-page .tab2 img,
+  #second-page .tab3 img {
+    width: 180px;
+    height: 200px;
+  }
+
+  #second-page .tab1 img:hover,
+  #second-page .tab2 img:hover,
+  #second-page .tab3 img:hover {
+    width: 200px;
+    height: 230px;
+  }
+
+  #second-page .tab1 button,
+  #second-page .tab2 button,
+  #second-page .tab3 button {
+    padding: 5px 100px;
+  }
+
+  #second-page #women-wears,
+  #second-page #kids-wears,
+  #second-page #jewelry {
+    padding-top: 150px;
+    margin-top: -100px;
+  }
+
+  #second-page #men-wears {
+    padding-top: 150px;
+    margin-top: -130px;
+  }
+
+  /* second page */
+}
+
+@media (max-width: 376px) {
+  /* second page */
+  #second-page #header {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  /* second page */
+}

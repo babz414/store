@@ -1,0 +1,257 @@
+/* Third Page */
+
+* {
+  /* box-sizing: border-box; */
+}
+
+:root {
+  --brown: rgb(165, 91, 42);
+}
+
+body {
+  background: var(--brown);
+}
+
+#third-page {
+  /* margin: 100px 0; */
+  display: flex;
+  justify-content: center;
+  padding: 15vh 0;
+}
+
+#third-page .properties {
+  display: flex;
+  flex-direction: column;
+}
+
+#third-page .property-info {
+  width: 640px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+#third-page .price {
+  position: relative;
+  right: 10px;
+}
+
+table {
+  width: 80vw;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#third-page li,
+#third-page p,
+#third-page td {
+  font-weight: bold;
+}
+
+/* #third-page .numbers {
+  width: 50px;
+  margin-left: 50px;
+} */
+
+#third-page .menCheckbox,
+.womenCheckbox,
+.kidsCheckbox,
+.jewelryCheckbox {
+  /* margin-top: -5px; */
+  margin-left: -30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#third-page .none {
+  margin-top: 15px;
+}
+
+.dropdown-content {
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-content .input {
+  background-color: white;
+  border: 0.2px solid rgb(66, 60, 60);
+  width: 140px;
+  padding: 0 45px;
+  margin: 0 25px;
+  position: relative;
+  bottom: 0.5px;
+}
+
+.dropdown-content ul {
+  /* padding: 0 60px; */
+  width: 140px;
+  padding: 0;
+  margin: 0 20px;
+  background-color: white;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  display: none;
+}
+
+.dropdown-content ul.active {
+  display: block;
+}
+.dropdown-content li {
+  margin: 5px;
+}
+
+.dropdown-content .one.active,
+.dropdown-content .two.active,
+.dropdown-content .three.active,
+.dropdown-content .four.active {
+  background-color: blue;
+  color: white;
+  width: 130px;
+  align-items: center;
+  justify-content: center;
+}
+
+.calcBtn {
+  padding: 5px 20px;
+  margin-left: 50px;
+}
+
+@media (max-width: 414px) {
+  /* third page */
+  #third-page {
+    /* margin: 100px 0; */
+    display: flex;
+    justify-content: center;
+    padding: 5vh 0;
+  }
+  table {
+    width: 100vw;
+  }
+
+  .properties {
+    width: 140px;
+  }
+
+  .property-info {
+    width: 110px;
+  }
+
+  .item-table {
+    font-size: 10px;
+  }
+
+  input[type="radio"] {
+    width: 8px;
+    margin-left: -5px;
+  }
+
+  .item-table {
+    width: 20px;
+  }
+  .number {
+    width: 5px;
+  }
+
+  .numbers {
+    width: 10px;
+  }
+
+  #third-page .property-info {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+  }
+
+  .menCheckbox,
+  .womenCheckbox,
+  .kidsCheckbox,
+  .jewelryCheckbox {
+    width: 200px;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  label {
+    position: relative;
+    top: -3px;
+    /* transform: translateY(100px); */
+  }
+
+  .menCheckbox label {
+    text-align: center;
+  }
+
+  #third-page .none {
+    margin-top: 0px;
+  }
+
+  .dropdown-content {
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dropdown-content ul {
+    width: 55px;
+    background-color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-left: 50px;
+    /* align-items: center; */
+    display: none;
+  }
+
+  .dropdown-content ul.active {
+    display: block;
+  }
+  .dropdown-content li {
+    margin: 5px;
+  }
+
+  .dropdown-content .input {
+    width: 60px;
+    padding: 0 0px;
+    margin-left: 55px;
+    position: relative;
+    /* top: 18px; */
+  }
+
+  .dropdown-content .one.active,
+  .dropdown-content .two.active,
+  .dropdown-content .three.active,
+  .dropdown-content .four.active {
+    background-color: blue;
+    color: white;
+    width: 45px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .calcBtn {
+    font-size: 7px;
+    font-weight: bold;
+    margin-left: 7px;
+  }
+  /* third page */
+}
