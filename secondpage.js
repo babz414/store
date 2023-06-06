@@ -94,10 +94,10 @@ function myFunction() {
       let answer = prompt(
         "Do you accept the calculated total cost of payment?, Enter 'Yes' or 'No'"
       );
-      if (answer == "yes") {
+      if (answer == "Yes") {
         alert("Thank You");
-      } else if (answer == "no") {
-        alert("Application Withdrawn");
+      } else if (answer == "yes") {
+        alert("Thank You");
       } else {
         alert("Application Withdrawn");
       }
