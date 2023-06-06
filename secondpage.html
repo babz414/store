@@ -19,15 +19,16 @@
             <th> Number of Items </th>
             <th> Costs($) </th>                    
           </tr>
+          <div id="men">
           <tr>
             <td class="item-table"> Men </td>
             <td> <ul class="properties"> 
-
+              
               <div class="property-info">
     
                 <div class="menCheckbox">
                   <div>
-                <input id="A" name="Gender" type="radio" required>
+                <input class="men" id="A" name="Gender" type="radio" value="200"  required>
                 <label for="A"> Fitty Lell Men's Slim... </label>
                 </div>
               
@@ -36,7 +37,7 @@
                 
                 <div class="menCheckbox">
                 <div>
-                <input id="B" name="Gender" type="radio" required>
+                <input class="men" id="B" name="Gender" type="radio" value="150" required>
                 <label for="B"> BURBERRY Reepham Shi </label>
                 </div>
                 <p class="price"> $150 </p>
@@ -45,7 +46,7 @@
 
                 <div class="menCheckbox">
                 <div>
-                <input id="C" name="Gender" type="radio" required>
+                <input class="men" id="C" name="Gender" type="radio" value="150" required>
                 <label for="C"> Men's Corporate Suit </label>
                 </div>
                 <p class="price"> $150 </p>  
@@ -53,7 +54,7 @@
 
                 <div class="menCheckbox">
                 <div>
-                <input id="D" name="Gender" type="radio" required>
+                <input class="men" id="D" name="Gender" value="220" type="radio" required>
                 <label for="D"> Das Solid Men RN... </label>
                 </div>
                 <p class="price"> $220</p>
@@ -62,7 +63,7 @@
 
                 <div class="menCheckbox" >
                 <div class="none">
-                <input id="E" name="Gender" type="radio" required>
+                <input class="men" value="0" id="E" name="Gender" type="radio" required>
                 <label for="E" > None </label>
                 </div>
                 </div>
@@ -74,22 +75,21 @@
             <p class="numbers" >
               <div class="dropdown-content">
 
-              <button class="input">Units</button>
-                <ul id="menItemNumber">
-                  <li class="one">1</li>
-                  <li class="two">2</li>
-                  <li class="three">3</li>
-                  <li class="four">4</li>
-                </ul>
-              </div>
+              <select name="Unit" id="menUnit" onchange="myFunction()">
+                <option value="">Unit</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+              </select>
             </p>
           </td>
   
           <td>
-            <p class="cost"> </p>
+            <p class="menCost"> </p>
           </td>
           </tr>
-  
+  </div>
           <tr>
             <td class="item-table"> Women </td>
             
@@ -99,7 +99,7 @@
       
                   <div class="womenCheckbox">
                     <div>
-                  <input id="A" name="Gender" type="radio" required>
+                  <input class="women" id="A" name="Gender" type="radio" value="395" required>
                   <label for="A"> Emma Silk Dress </label>
                   </div>
                 
@@ -108,7 +108,7 @@
                   
                   <div class="womenCheckbox">
                   <div>
-                  <input id="B" name="Gender" type="radio" required>
+                  <input class="women" id="B" name="Gender" value="1050" type="radio" required>
                   <label for="B"> ALAIA Edition Zip... </label>
                   </div>
                   <p class="price"> $1050 </p>
@@ -117,7 +117,7 @@
   
                   <div class="womenCheckbox">
                   <div>
-                  <input id="C" name="Gender" type="radio" required>
+                  <input class="women" value="328"  id="C" name="Gender" type="radio" required>
                   <label for="C"> ALEXIS Lune Dress </label>
                   </div>
                   <p class="price"> $328 </p>  
@@ -125,7 +125,7 @@
   
                   <div class="womenCheckbox">
                   <div>
-                  <input id="D" name="Gender" type="radio" required>
+                  <input class="women" value="430" id="D" name="Gender" type="radio" required>
                   <label for="D"> AGENCE Karly Ruched Dress </label>
                   </div>
                   <p class="price"> $430</p>
@@ -136,7 +136,7 @@
 
                   <div class="none">
 
-                  <input id="E" name="Gender" type="radio" required>
+                  <input class="women" value="0" id="E" name="Gender" type="radio" required>
                   <label for="E" > None </label>
 
                   </div>
@@ -152,19 +152,19 @@
             <p class="numbers" >
               <div class="dropdown-content">
 
-                <button class="input">Units</button>
-                  <ul id="womenItemNumber">
-                    <li class="one">1</li>
-                    <li class="two">2</li>
-                    <li class="three">3</li>
-                    <li class="four">4</li>
-                  </ul>
+                <select name="Unit" id="womenUnit" onchange="myFunction()">
+                  <option value="">Unit</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                </select>
                 </div>
             </p>
           </td>
   
           <td>
-            <p class="cost"> </p>
+            <p class="womenCost"> </p>
           </td>
           </tr>
   
@@ -176,7 +176,7 @@
   
               <div class="kidsCheckbox">
                 <div>
-              <input id="A" name="Gender" type="radio" required>
+              <input class="kids" value="41.99"  id="A" name="Gender" type="radio" required>
               <label for="A"> Children Elegant Dress </label>
               </div>
             
@@ -185,7 +185,7 @@
               
               <div class="kidsCheckbox">
               <div>
-              <input id="B" name="Gender" type="radio" required>
+              <input class="kids" value="48.20" id="B" name="Gender" type="radio" required>
               <label for="B"> NNJXD Flower Girl Dress... </label>
               </div>
               <p class="price"> $48.20 </p>
@@ -194,7 +194,7 @@
 
               <div class="kidsCheckbox">
               <div>
-              <input id="C" name="Gender" type="radio" required>
+              <input class="kids" value="54.60" id="C" name="Gender" type="radio" required>
               <label for="C">  RBarBary Yellow </label>
               </div>
               <p class="price"> $54.60 </p>  
@@ -202,7 +202,7 @@
 
               <div class="kidsCheckbox">
               <div>
-              <input id="D" name="Gender" type="radio" required>
+              <input class="kids" value="100" id="D" name="Gender" type="radio" required>
               <label for="D">  RBarBary Yellow Stray... </label>
               </div>
               <p class="price"> $100</p>
@@ -213,7 +213,7 @@
 
               <div class="none">
 
-              <input id="E" name="Gender" type="radio" required>
+              <input class="kids" value="0" id="E" name="Gender" type="radio" required>
               <label for="E" > None </label>
 
               </div>
@@ -227,20 +227,20 @@
             <p class="numbers" >
               <div class="dropdown-content">
 
-                <button class="input">Units</button>
-                  <ul id="kidsItemNumber">
-                    <li class="one">1</li>
-                    <li class="two">2</li>
-                    <li class="three">3</li>
-                    <li class="four">4</li>
-                  </ul>
+                <select name="Unit" id="kidsUnit" onchange="myFunction()">
+                  <option value="">Unit</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                </select>
                 </div>
             </p>
 
           </td>
   
           <td>
-            <p class="cost"> </p>
+            <p class="kidsCost"> </p>
           </td>
           </tr>
   
@@ -254,7 +254,7 @@
   
               <div class="jewelryCheckbox">
                 <div>
-              <input id="A" name="Gender" type="radio" required>
+              <input class="jewelry" value="241.00" id="A" name="Gender" type="radio" required>
               <label for="A"> SOLIS 18KT GOLD...  </label>
               </div>
             
@@ -263,7 +263,7 @@
               
               <div class="jewelryCheckbox">
               <div>
-              <input id="B" name="Gender" type="radio" required>
+              <input class="jewelry" value="48.20" id="B" name="Gender" type="radio" required>
               <label for="B"> REGINA 9KT GOLD... </label>
               </div>
               <p class="price"> $48.20 </p>
@@ -272,15 +272,15 @@
 
               <div class="jewelryCheckbox">
               <div>
-              <input id="C" name="Gender" type="radio" required>
+              <input class="jewelry" value="719" id="C" name="Gender" type="radio" required>
               <label for="C">  Rolex Daytona </label>
               </div>
-              <p class="price"> $71,944 </p>  
+              <p class="price"> $719 </p>  
               </div>
 
               <div class="jewelryCheckbox">
               <div>
-              <input id="D" name="Gender" type="radio" required>
+              <input class="jewelry" value="120" id="D" name="Gender" type="radio" required>
               <label for="D"> Men Watch And Bracelet... </label>
               </div>
               <p class="price"> $120</p>
@@ -291,7 +291,7 @@
 
               <div class="none">
 
-              <input id="E" name="Gender" type="radio" required>
+              <input class="jewelry" value="0" id="E" name="Gender" type="radio" required>
               <label for="E" > None </label>
 
               </div>
@@ -306,19 +306,19 @@
             <p class="numbers" >
                 <div class="dropdown-content">
   
-                  <button class="input">Units </button> 
-                    <ul id="jewelryItemNumber">
-                      <li class="one">1</li>
-                      <li class="two">2</li>
-                      <li class="three">3</li>
-                      <li class="four">4</li>
-                    </ul>
+                  <select name="Unit" id="jewelryUnit" onchange="myFunction()">
+                    <option value="">Unit</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                  </select>
                   </div>
             </p>
           </td>
   
           <td>
-            <p class="cost"> </p>
+            <p class="jewelryCost"> </p>
           </td>
           </tr>
   
@@ -334,7 +334,7 @@
               <button class="calcBtn">calculate</button>
             </td>
   
-            <td>($) 0</td>
+            <td id="totalAmount"></td>
           </tr>
         </table>
       </section>

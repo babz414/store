@@ -26,16 +26,21 @@ header {
 
 header h1 {
   color: #fff;
+  font-size: 25px;
 }
 
 main {
   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 form {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
+  width: 50vw;
 }
 
 .form-group {
@@ -45,6 +50,7 @@ form {
 label {
   display: block;
   margin-bottom: 5px;
+  font-size: 13px;
 }
 
 input[type="text"],
@@ -60,9 +66,10 @@ button[type="submit"] {
   background-color: var(--brown);
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 7px 20px;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 10px;
 }
 
 footer {

@@ -1,4 +1,4 @@
-const menCheckBox = document.getElementsByClassName("menCheckbox");
+const menCheckBox = document.querySelectorAll(".menCheckbox");
 const womenCheckBox = document.getElementsByClassName("womenCheckbox");
 const kidsCheckBox = document.getElementsByClassName("kidsCheckbox");
 const jewelryCheckBox = document.getElementsByClassName("jewelryCheckbox");
@@ -10,37 +10,97 @@ let numberOfItemsForJewelry = document.getElementById("jewelryItemNumber");
 let numberOfItems = document.querySelectorAll(".input");
 let dropdown = document.querySelectorAll(".dropdown-content");
 
-numberOfItems.addEvent;
-let a = 1;
-let b = 1;
-let c = 1;
-let d = 1;
+const menUnit = document.getElementById("menUnit");
+const womenUnit = document.getElementById("womenUnit");
+const kidsUnit = document.getElementById("kidsUnit");
+const jewelryUnit = document.getElementById("jewelryUnit");
+const totalAmount = document.getElementById("totalAmount");
 
-for (let i = 0; i < 4; i++) {
-  // console.log(numberOfItems[i]);
-  let dropdownContent = dropdown[i].querySelector("ul");
+const calcBtn = document.querySelector(".calcBtn");
+const men = document.querySelectorAll(".men");
+const women = document.querySelectorAll(".women");
+const kids = document.querySelectorAll(".kids");
 
-  let dropdownContentListMen = numberOfItemsForMen.getElementsByTagName("li");
-  let dropdownContentListWomen =
-    numberOfItemsForWomen.getElementsByTagName("li");
-  let dropdownContentListKids = numberOfItemsForKids.getElementsByTagName("li");
-  let dropdownContentListJewelry =
-    numberOfItemsForJewelry.getElementsByTagName("li");
-  // let listClassName = dropdownContentList[i].className;
-  numberOfItems[i].addEventListener("click", function () {
-    dropdownContent.classList.add("active");
+const jewelry = document.querySelectorAll(".jewelry");
+let menItems = document.querySelector("#men");
+const menItemsPrice = document.querySelector(".menCost");
+const womenItemsPrice = document.querySelector(".womenCost");
+const kidsItemsPrice = document.querySelector(".kidsCost");
+const jewelryItemsPrice = document.querySelector(".jewelryCost");
+// const ass = document.getElementById("Ass");
+console.log(menItemsPrice.textContent);
+
+function myFunction() {
+  console.log(menUnit.selectedIndex);
+
+  const a = menUnit.selectedIndex;
+  for (let i = 0; i < 5; i++) {
+    if (men[i].checked) {
+      const w = Number(men[i].value);
+      console.log(w);
+      let menTotal = a * w;
+
+      menItemsPrice.textContent = `$${menTotal}`;
+    }
+  }
+
+  for (let i = 0; i < 5; i++) {
+    if (women[i].checked) {
+      const b = womenUnit.selectedIndex;
+
+      const x = Number(women[i].value);
+      let womenTotal = b * x;
+      womenItemsPrice.textContent = `$${womenTotal}`;
+    }
+  }
+  for (let i = 0; i < 5; i++) {
+    if (kids[i].checked) {
+      const c = kidsUnit.selectedIndex;
+      const y = Number(kids[i].value);
+      let kidsTotal = c * y;
+      kidsItemsPrice.textContent = `$${kidsTotal}`;
+    }
+  }
+
+  for (let i = 0; i < 5; i++) {
+    const d = jewelryUnit.selectedIndex;
+    if (jewelry[i].checked) {
+      const z = Number(jewelry[i].value);
+      let jewelryTotal = d * z;
+
+      jewelryItemsPrice.textContent = `$${jewelryTotal}`;
+    }
+  }
+
+  let menP = menItemsPrice.textContent;
+  let womenP = womenItemsPrice.textContent;
+  let kidsP = kidsItemsPrice.textContent;
+  let jewelryP = jewelryItemsPrice.textContent;
+
+  menP = menP.slice(1);
+  womenP = womenP.slice(1);
+  kidsP = kidsP.slice(1);
+  jewelryP = jewelryP.slice(1);
+
+  menP = Number(menP);
+  womenP = Number(womenP);
+  kidsP = Number(kidsP);
+  jewelryP = Number(jewelryP);
+
+  calcBtn.addEventListener("click", function () {
+    totalAmount.textContent = `$${menP + womenP + kidsP + jewelryP}`;
+
+    setTimeout(() => {
+      let answer = prompt(
+        "Do you accept the calculated total cost of payment?, Enter 'Yes' or 'No'"
+      );
+      if (answer == "yes") {
+        alert("Thank You");
+      } else if (answer == "no") {
+        alert("Application Withdrawn");
+      } else {
+        alert("Application Withdrawn");
+      }
+    }, 2000);
   });
-
-  dropdownContentListMen[i].addEventListener("click", function () {
-    console.log(dropdownContentListMen[i].className);
-    let menClassName = dropdownContentListMen[i].className;
-
-    menClassName = menClassName.classList.add("active");
-    return menClassName;
-  });
-  // .addEventListener()
-
-  // .addEventListener("click", function () {
-  //   console.log(dropdownContent);
-  // });
 }

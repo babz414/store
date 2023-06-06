@@ -25,7 +25,7 @@ body {
 }
 
 #third-page .property-info {
-  width: 640px;
+  width: 440px;
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
@@ -33,7 +33,7 @@ body {
 
 #third-page .price {
   position: relative;
-  right: 10px;
+  right: -40px;
 }
 
 table {
@@ -248,10 +248,34 @@ td {
     justify-content: center;
   }
 
+  #third-page .price {
+    position: relative;
+    right: 10px;
+  }
   .calcBtn {
     font-size: 7px;
     font-weight: bold;
     margin-left: 7px;
   }
   /* third page */
+}
+@media (max-width: 390px) {
+  .properties {
+    font-size: 7px;
+  }
+  #third-page .price {
+    margin-top: 13px;
+    position: relative;
+    right: 30px;
+  }
+}
+@media (max-width: 375px) {
+  .properties {
+    font-size: 7px;
+  }
+  #third-page .price {
+    margin-top: 13px;
+    position: relative;
+    right: 30px;
+  }
 }
