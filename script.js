@@ -10,6 +10,7 @@ let cartAdded = document.querySelector("#cart-added");
 let radio = document.getElementById("radio");
 let hr = document.getElementById("hr");
 let cipContainer = document.getElementById("cipcontainer");
+let brandtext = document.querySelector(".brand-info-text");
 let a = times.classList.contains("active");
 let x = window.matchMedia("(max-width: 414px)");
 let b = 1;
@@ -23,8 +24,8 @@ for (let i = 0; i < 36; i++) {
 
       cartAmount.textContent = k;
       showNotificationBar();
-      cartItems = cartItems[i].parentElement.classList.add("selected");
-      console.log(cartItems[i].parentElement);
+      // cartItems = cartItems[i].parentElement.classList.add("selected");
+      // console.log(cartItems[i].parentElement);
     } else {
     }
   });
@@ -40,7 +41,7 @@ function showNotificationBar() {
   cartAdded.classList.add("active");
   hr.classList.add("active");
 
-  timer = setTimeout(hideNotificationBar, 2500);
+  timer = setTimeout(hideNotificationBar, 500);
 }
 
 function hideNotificationBar() {
@@ -56,6 +57,7 @@ window.addEventListener("scroll", function () {
 
 bars.addEventListener("click", function () {
   navbar.classList.add("toggle");
+  navbar.style.zIndex = "10000000";
   bars.style.display = "none";
   times.classList.add("active");
 

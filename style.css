@@ -165,12 +165,12 @@ h3 {
   background-color: white;
   width: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: 1.5s ease-in;
+  transition: 1s ease-in;
 }
 
 #cart-added.active {
   right: 10px;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 #cart-added.active.remove {
@@ -191,7 +191,7 @@ h3 {
   height: 5px;
   background-color: green;
   padding: 0;
-  transition: 3s ease;
+  transition: 0.3s ease;
 }
 
 #cart-added #hr.active {
@@ -642,6 +642,7 @@ h3 {
   .brand-info {
     display: flex;
     flex-direction: column;
+    margin-top: 190px;
   }
 
   #bars {
